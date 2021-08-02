@@ -8,7 +8,7 @@ const configs = {
 };
 
 client.on('message', (message) => {
-  var args = message.content.slice(configs.prefix.length).trim().spli(' ');
+  var args = message.content.slice(configs.prefix.length).trim().split(' ');
   const commandName = args.shift();
   
   if (!message.content.startsWith(configs.prefix) || message.author.bot) return;
